@@ -1,4 +1,4 @@
-require_relative "coffee"
+require_relative "coffee", "menu"
 
 class Coffee_Shop
   
@@ -20,25 +20,19 @@ class Coffee_Shop
   end
     
   def view_menu
-#---------------------------------------------------------------------------------------------------------------------------------------------
-  #Menu Hashes to access items
-  drink = {:1=>"latte", :2=>"cappuccino", :3=>"americano", :4=>"macchiato", :5=>"matcha"}
-  food = {:1=>"plain bagel with cream cheese", :2=>"egg and potatoes breakfast burrito", :3=>"avocado toast", :4=>"crossaint breakfast sandwich", :5=>"grilled cheese"}
-  flavors= {:1=>"caramel", :2=>"vanilla", :3=>"butterscotch", :4=> "chocolate", :5=>"blueberry"}
-
-  #Display Menu
-  drink_menu = ["1.latte", "2.cappuccino", "3.americano", "4.macchiato", "5.matcha"]
-  food_menu = ["1.plain bagel with cream cheese", "2.egg and potatoes breakfast burrito", "3.avocado toast", "4.crossaint breakfast sandwich", "5.grilled cheese"]
-  flavor_menu = ["caramel", "vanilla", "butterscotch", "chocolate", "blueberry"]
-#----------------------------------------------------------------------------------------------------------------------------------------------
     puts "To start your order, would you like to view our food menu or coffee menu?"
     puts "Type 'food' for the food menu and 'coffee' for the coffee menu"
     choose_menu=gets.chomp
     puts "Perfect! Here is the #{choose_menu} menu"
-    display_menu= choose_menu.to_s + "_menu"
-    puts display_menu
+    if choose_menu == "food"
+      puts food_menu
+    elseif choose_menu == "coffee"
+      puts drink_menu
+    else
+      puts "Please choose a valid option"
+    end 
 
-    puts "Now that you've viewed the #{choose_menu} menu, what would you like to do now?"
+    puts "Now that you've viewed the #{choose_menu} menu, what would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
     what_to_do= gets.chomp.to_i
     if what_to_do == 1
@@ -54,8 +48,51 @@ class Coffee_Shop
   
   
   def place__order
-    puts "What drink can I get for you today?"
-    drink_order= gets.chomp
+    puts "Did you want to order a drink or food?"
+    puts "Type 'drink' to order a drink or 'food' to order food"
+    order_option= gets.chomp
+    puts "What #{order_option} can I get for you today?"
+    puts "Here are the #{order_option}s:"
+    if order_option == "food"
+      puts food_menu
+      food_choice= gets.chomp.to_i
+      if food_choice== 1
+        food.fetch(:1)
+      elsif food_choice== 2
+        food.fetch(:2)
+      elsif food_choice== 3
+        food.fetch(:3)
+      elsif food_choice== 4
+        food.fetch(:4)
+      elsif food_choice== 5
+        food.fetch(:5)
+      else
+        "Please choose a valid option"
+      end
+      
+    elseif order_option == "coffee"
+      puts drink_menu
+      drink_choice= gets.chomp.to_i
+      if drink_choice== 1
+        drink.fetch(:1)
+      elsif drink_choice== 2
+        drink.fetch(:2)
+      elsif drink_choice== 3
+        drink.fetch(:3)
+      elsif drink_choice== 4
+        drink.fetch(:4)
+      elsif drink_choice== 5
+        drink.fetch(:5)
+      else
+        "Please choose a valid option"
+      end
+    end
+    puts "Type the number of the menu item you would like"
+    
+
+
+
+
     puts "Would you like any flavors in your drink? Type 'Y' for 'Yes' and 'N' for 'No'"
     flavor_choice= gets.chomp
     if flavor_choice == 'Y'
