@@ -34,6 +34,7 @@ class Coffee_Shop
     puts "Here is the menu:"
     puts drink_menu
 
+    puts "/n"
     puts "Now that you've viewed the menu, what would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
     puts "Type the number of the option you'd like to continue with"
