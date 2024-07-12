@@ -12,6 +12,7 @@ class CoffeeShop
   end
 
   def main_menu
+    puts "What would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
     what_to_do= gets.chomp
     if what_to_do == "1"
