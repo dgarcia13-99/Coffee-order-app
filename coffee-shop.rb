@@ -2,8 +2,16 @@ require_relative "coffee"
 
 
 class Coffee_Shop
-
   def initialize
+    #--------------------------------------------------------------------------------------------------------------------------------
+    #Menu Hashes to access items
+    drink = {:"1"=>"latte", :"2"=>"cappuccino", :"3"=>"americano", :"4"=>"macchiato", :"5"=>"matcha"}
+    flavors= {:"1"=>"caramel", :"2"=>"vanilla", :"3"=>"butterscotch", :"4"=> "chocolate", :"5"=>"blueberry"}
+
+    #Display Menu
+    drink_menu = ["1.latte", "2.cappuccino", "3.americano", "4.macchiato", "5.matcha"]
+    flavor_menu = ["caramel", "vanilla", "butterscotch", "chocolate", "blueberry"]
+    #--------------------------------------------------------------------------------------------------------------------------------
     puts "Welcome to the Grand opening of Sage Coffee Shop!"
     puts "We offer delicious coffee options"
     puts "What would you like to do?"
@@ -21,17 +29,7 @@ class Coffee_Shop
   end
     
   def view_menu
-    #--------------------------------------------------------------------------------------------------------------------------------
-    #Menu Hashes to access items
-    drink = {:"1"=>"latte", :"2"=>"cappuccino", :"3"=>"americano", :"4"=>"macchiato", :"5"=>"matcha"}
-    flavors= {:"1"=>"caramel", :"2"=>"vanilla", :"3"=>"butterscotch", :"4"=> "chocolate", :"5"=>"blueberry"}
-
-    #Display Menu
-    drink_menu = ["1.latte", "2.cappuccino", "3.americano", "4.macchiato", "5.matcha"]
-    flavor_menu = ["caramel", "vanilla", "butterscotch", "chocolate", "blueberry"]
-    #--------------------------------------------------------------------------------------------------------------------------------
-    puts "To start your order, please take a look at our menu"
-    puts "Here is the menu:"
+    puts "To start your order, Please take a moment to consider our menu"
     puts drink_menu
 
     puts "\n"
@@ -50,7 +48,7 @@ class Coffee_Shop
     end
   end
   
-  def place__order
+  def place_order
     puts "What drink can I get for you today?"
     puts "Here are the drink options:"
     puts drink_menu
@@ -122,7 +120,7 @@ class Coffee_Shop
       "Just started working on your drink!", 
       "Adding final touches",
       "Ready!"]
-      
+
     current_status=statuses.sample
     puts current_status
   end
