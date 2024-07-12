@@ -1,7 +1,8 @@
-require_relative "coffee", "menu"
+require_relative "coffee"
+
 
 class Coffee_Shop
-  
+
   def initialize
     puts "Welcome to the Grand opening of Sage Coffee Shop!"
     puts "We offer delicious coffee options"
@@ -20,6 +21,15 @@ class Coffee_Shop
   end
     
   def view_menu
+    #--------------------------------------------------------------------------------------------------------------------------------
+    #Menu Hashes to access items
+    drink = {:"1"=>"latte", :"2"=>"cappuccino", :"3"=>"americano", :"4"=>"macchiato", :"5"=>"matcha"}
+    flavors= {:"1"=>"caramel", :"2"=>"vanilla", :"3"=>"butterscotch", :"4"=> "chocolate", :"5"=>"blueberry"}
+
+    #Display Menu
+    drink_menu = ["1.latte", "2.cappuccino", "3.americano", "4.macchiato", "5.matcha"]
+    flavor_menu = ["caramel", "vanilla", "butterscotch", "chocolate", "blueberry"]
+    #--------------------------------------------------------------------------------------------------------------------------------
     puts "To start your order, please take a look at our menu"
     puts "Here is the menu:"
     puts drink_menu
