@@ -8,7 +8,10 @@ class CoffeeShop
   def welcome
     puts "Welcome to the Grand opening of Sage Coffee Shop!"
     puts "We offer delicious coffee options"
-    puts "What would you like to do?"
+    main_menu
+  end
+
+  def main_menu
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
     what_to_do= gets.chomp
     if what_to_do == "1"
@@ -147,7 +150,7 @@ class CoffeeShop
       "Just started working on your drink!", 
       "Get ready! We're adding the final touches",
       "Ready! Thank you for shopping with Sage Coffee Shop. See you soon!"]
-      
+
     current_status=statuses.sample
     puts current_status
   end

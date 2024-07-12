@@ -1,5 +1,9 @@
-# ruby-cli-template
+# Coffee-shop Command Line Interface App
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+How to Run:
+Run app.rb on the terminal
+
+Description:
+This app allows the user to view Sage Coffee Shop's coffee menu, place an order, and view order status.
 
 - Ruby version: `3.2.1`
