@@ -34,7 +34,7 @@ class Coffee_Shop
     puts "Here is the menu:"
     puts drink_menu
 
-    puts "/n"
+    puts "\n"
     puts "Now that you've viewed the menu, what would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
     puts "Type the number of the option you'd like to continue with"
@@ -54,7 +54,7 @@ class Coffee_Shop
     puts "What drink can I get for you today?"
     puts "Here are the drink options:"
     puts drink_menu
-    puts "/n"
+    puts "\n"
     puts "Type the number of the menu item you would like to order"
     drink_choice= gets.chomp
     if drink_choice== "1"
@@ -75,12 +75,12 @@ class Coffee_Shop
     puts "What size did you want your drink?"
     puts "Type 'small', 'medium', or 'large'"
     self.size= gets.chomp
-    puts "/n"
+    puts "\n"
 
     puts "Did you want your drink iced or hot?"
     puts "Type 'iced' or 'hot'"
     self.temperature=gets.chomp
-    puts "/n"
+    puts "\n"
 
     puts "Would you like any flavors in your drink? Type 'Y' for 'Yes' and 'N' for 'No'"
     flavor_choice= gets.chomp
@@ -123,7 +123,6 @@ class Coffee_Shop
       "Adding final touches",
       "Ready!"
   ]
-
     current_status=statuses.sample
     puts current_status
   end
