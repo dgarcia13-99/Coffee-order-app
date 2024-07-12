@@ -7,12 +7,12 @@ class Coffee_Shop
     puts "We offer delicious coffee options"
     puts "What would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
-    what_to_do= gets.chomp.to_i
-    if what_to_do == 1
+    what_to_do= gets.chomp
+    if what_to_do == "1"
       view_menu
-    elsif what_to_do == 2
+    elsif what_to_do == "2"
       place__order
-    elsif what_to_do == 3
+    elsif what_to_do == "3"
       status
     else
       puts "Please choose a valid option"
@@ -26,12 +26,13 @@ class Coffee_Shop
 
     puts "Now that you've viewed the menu, what would you like to do?"
     puts ["1. View Menu", "2. Place Order", "3. View Order Status"]
-    what_to_do= gets.chomp.to_i
-    if what_to_do == 1
+    puts "Type the number of the option you'd like to continue with"
+    what_to_do= gets.chomp
+    if what_to_do == "1"
       view_menu
-    elsif what_to_do == 2
+    elsif what_to_do == "2"
       place_order
-    elsif what_to_do == 3
+    elsif what_to_do == "3"
       status
     else
       puts "Please choose a valid option"
@@ -44,17 +45,17 @@ class Coffee_Shop
     puts drink_menu
     puts "/n"
     puts "Type the number of the menu item you would like to order"
-    drink_choice= gets.chomp.to_i
-    if drink_choice== 1
-      self.drink= drink.fetch(:1)
-    elsif drink_choice== 2
-      self.drink= drink.fetch(:2)
-    elsif drink_choice== 3
-      self.drink= drink.fetch(:3)
-    elsif drink_choice== 4
-      self.drink= drink.fetch(:4)
-    elsif drink_choice== 5
-      self.drink= drink.fetch(:5)
+    drink_choice= gets.chomp
+    if drink_choice== "1"
+      self.drink= drink.fetch(:"1")
+    elsif drink_choice== "2"
+      self.drink= drink.fetch(:"2")
+    elsif drink_choice== "3"
+      self.drink= drink.fetch(:"3")
+    elsif drink_choice== "4"
+      self.drink= drink.fetch(:"4")
+    elsif drink_choice== "5"
+      self.drink= drink.fetch(:"5")
     else
       "Please choose a valid option"
     end
@@ -78,20 +79,20 @@ class Coffee_Shop
       puts "Type the number of the flavor option you would like to add to your drink"
       add_flavor=gets.chomp.to_i
       flavor_menu = ["caramel", "vanilla", "butterscotch", "chocolate", "blueberry"]
-      if add_flavor == 1
-        self.flavor= flavor.fetch(:1)
+      if add_flavor == "1"
+        self.flavor= flavor.fetch(:"1")
         puts "Perfect! Your final order is a #{@size} #{@temperature} #{@drink} with #{@flavor} flavor. It should be ready shortly!"
-      elsif add_flavor == 2
-        self.flavor= flavor.fetch(:2)
+      elsif add_flavor == "2"
+        self.flavor= flavor.fetch(:"2")
         puts "Perfect! Your final order is a #{@size} #{@temperature} #{@drink} with #{@flavor} flavor. It should be ready shortly!"
-      elsif add_flavor == 3
-        self.flavor= flavor.fetch(:3)
+      elsif add_flavor == "3"
+        self.flavor= flavor.fetch(:"3")
         puts "Perfect! Your final order is a #{@size} #{@temperature} #{@drink} with #{@flavor} flavor. It should be ready shortly!"
-      elsif add_flavor == 4
-        self.flavor= flavor.fetch(:4)
+      elsif add_flavor == "4"
+        self.flavor= flavor.fetch(:"4")
         puts "Perfect! Your final order is a #{@size} #{@temperature} #{@drink} with #{@flavor} flavor. It should be ready shortly!"
-      elsif add_flavor == 5
-        self.flavor= flavor.fetch(:5)
+      elsif add_flavor == "5"
+        self.flavor= flavor.fetch(:"5")
         puts "Perfect! Your final order is a #{@size} #{@temperature} #{@drink} with #{@flavor} flavor. It should be ready shortly!"
       else
         puts "Please choose a valid option"
