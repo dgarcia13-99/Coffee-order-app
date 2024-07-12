@@ -1,7 +1,7 @@
 class Coffee
   attr_accessor :drink, :temperature, :size, :flavor
 
-  def initialize(drink, temperature, size, flavor="none")
+  def initialize
     @drink= drink
     @temperature = temperature
     @size= size
