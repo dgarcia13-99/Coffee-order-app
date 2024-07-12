@@ -121,7 +121,8 @@ class Coffee_Shop
       "Haven't started on your drink",
       "Just started working on your drink!", 
       "Adding final touches",
-      "Ready!"
+      "Ready!"]
+      
     current_status=statuses.sample
     puts current_status
   end
